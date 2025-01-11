@@ -34,7 +34,6 @@ public class CalculateBonusArray{
 				System.out.println("Please enter a valid salary");
 				salary[i] = input.nextDouble();
 			}
-			
 			System.out.print("Enter years of service of employee "+(i+1)+":");
 			years[i] = input.nextDouble();
 			
@@ -53,7 +52,7 @@ public class CalculateBonusArray{
 				bonus[i] = salary[i] * 0.05;
 			}
 			
-			// 2% if less than 5 years
+			// 2% if years less than 5 years
 			else{
 				bonus[i] = salary[i] * 0.02;
 			}
