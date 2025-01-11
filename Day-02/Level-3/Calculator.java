@@ -17,7 +17,7 @@ public class Calculator {
         System.out.print("Enter the operator (+, -, *, /): ");
         String op = input.next();
 
-        // Perform operations using switch...case statement
+        // Perform operations using switch statement
         switch (op) {
             case "+":
                 // Performing addition
