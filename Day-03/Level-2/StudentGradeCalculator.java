@@ -63,10 +63,17 @@ public class StudentGradeCalculator {
 				grade[i] = 'R';
 			}
 		}
+		
+		System.out.println("\n--- Student Results ---");
+        System.out.println("-----------------------------------------------------");
+        System.out.printf("%-10s %-10s %-10s %-10s\n", "Student", "Marks", "Percentage", "Grade");
+        System.out.println("-----------------------------------------------------");
+		
 		for(int i = 0; i < numStudents; i++){
-			System.out.println("Marks of student "+(i+1)+ " is:" +totalMarks[i]);
-			System.out.println("Percentage of student "+(i+1)+ " is:" +percentages[i]);
-			System.out.println("Grade of student "+(i+1)+ " is:" +grade[i]);
+			System.out.printf("%-10d %-10d %-10d %-10s\n", (i + 1), totalMarks[i], percentages[i], grade[i]);
+			//System.out.println("Marks of student "+(i+1)+ " is:" +totalMarks[i]);
+			//System.out.println("Percentage of student "+(i+1)+ " is:" +percentages[i]);
+			//System.out.println("Grade of student "+(i+1)+ " is:" +grade[i]);
 		}
 
 		//closing scanner
