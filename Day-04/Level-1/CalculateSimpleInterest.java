@@ -7,7 +7,6 @@ public class CalculateSimpleInterest{
 	    // calculate the result and store it into a double variable
 		double result = ( principal * rate * time) / 100;
 		
-		
 		// Return the result
 		return result;
 	}
