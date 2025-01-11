@@ -22,18 +22,6 @@ public class LargestAndSecondLargest{
 
             // Increment the index
             index++;
-            // If the array is full, increase the array size by 10
-            if (index == maxDigit) {
-                maxDigit += 10;
-                int[] temp = new int[maxDigit];
-
-                // Copy the digits from the original array to the new array
-                for (int i = 0; i < digits.length; i++) {
-                    temp[i] = digits[i];
-                }
-                // assigning the temp array to digits array 
-                digits = temp;
-            }
         }
         // Initialize the largest and second largest digits
         int largest = -1;
