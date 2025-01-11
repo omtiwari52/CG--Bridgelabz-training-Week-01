@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class PrintFactorsOfNumber{
     public static void main(String[] args) {
 	
@@ -15,7 +14,6 @@ public class PrintFactorsOfNumber{
             System.out.println("Please enter a positive number");
             return;
         }
-
         // creating a variable named maxFactor
         int maxFactor = 10;
         int[] factors = new int[maxFactor];
@@ -37,14 +35,14 @@ public class PrintFactorsOfNumber{
                 factors[index++] = i;
             }
         }
-
-        // Display the factors
+        // Printing the factors
         System.out.println("Factors of " + number + ":");
         for (int i = 0; i < index; i++) {
             System.out.print(factors[i] + " ");
         }
         System.out.println();
 
+		//closing scanner
         input.close();
     }
 }
