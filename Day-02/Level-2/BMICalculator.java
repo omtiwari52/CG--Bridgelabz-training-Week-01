@@ -11,7 +11,7 @@ public class BMICalculator {
         System.out.print("Enter your height in cm: ");
         double heightInCm = input.nextDouble();
         
-        // Convert height from centimeters to meters
+        // Converting height from centimeters to meters
         double heightInMeters = heightInCm / 100;
         
         // Calculate BMI using the formula
