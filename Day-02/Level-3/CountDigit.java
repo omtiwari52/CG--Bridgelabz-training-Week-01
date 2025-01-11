@@ -16,7 +16,6 @@ public class CountDigit {
             number /= 10;    //removing last digit 
             digitCount++;         // after removing incrementing the count 
         }
-        
         // Display the count
         System.out.println("The number of digits is: " + digitCount);
         
