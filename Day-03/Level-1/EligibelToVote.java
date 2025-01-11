@@ -8,7 +8,7 @@ public class EligibelToVote {
 		//creating instance of scanner class
         Scanner input = new Scanner(System.in);
 
-        // Take user input for the ages of 10 students
+        // Taking user input for the ages of 10 students
         System.out.println("Enter the ages of 10 students:");
         for (int i = 0; i < ages.length; i++) {
             System.out.print("Age of Student " + (i + 1) + " :");
