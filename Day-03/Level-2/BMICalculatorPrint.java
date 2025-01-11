@@ -20,6 +20,7 @@ public class BMICalculatorPrint {
 
             // Input height and weight
             System.out.print("Height (in meters): ");
+			
             heights[i] = input.nextDouble();
 
             System.out.print("Weight (in kilograms): ");

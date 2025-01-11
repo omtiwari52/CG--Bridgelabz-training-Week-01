@@ -32,7 +32,6 @@ public class FrequencyOfDigit {
                 System.out.println("Digit " + i + " appears " + frequency[i] + " time(s)");
             }
         }
-		
         // Close the scanner object
         input.close();
 	}
