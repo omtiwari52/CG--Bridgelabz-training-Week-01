@@ -28,10 +28,10 @@ public class IllegalArgumentExceptionDemo{
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         System.out.print("Enter a string: ");
-        String input = scanner.nextLine();
+        String input = input.nextLine();
 
         // Call the method to generate the exception
         generateException(input);
