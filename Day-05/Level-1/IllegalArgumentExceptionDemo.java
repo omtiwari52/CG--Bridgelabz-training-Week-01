@@ -38,5 +38,8 @@ public class IllegalArgumentExceptionDemo{
 
         // Call the method to handle the RuntimeException
         handleRuntimeException(input);
+		
+		//close canner
+		input.close();
     }
 }
