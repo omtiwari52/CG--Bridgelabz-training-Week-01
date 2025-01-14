@@ -69,7 +69,8 @@ public class VowelAndConsonantCount{
 		// Display the result
 		System.out.println("Number of Vowels: " + resultArr[0]);
 		System.out.println("Number of Consonants: " + resultArr[1]);
-		//close scannerinput.close();
+		//close scanner
+		input.close();
 		
 	}
 }
