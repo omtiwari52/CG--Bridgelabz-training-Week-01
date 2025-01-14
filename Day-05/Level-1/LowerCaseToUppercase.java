@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class upperToLowerCase{
+public class LowerCaseToUppercase{
 	
 	//method to compare two string
 	public static boolean isEqual(String str1, String str2){

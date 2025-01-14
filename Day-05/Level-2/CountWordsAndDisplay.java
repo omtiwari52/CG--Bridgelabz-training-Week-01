@@ -1,10 +1,22 @@
 import java.util.Scanner;
-public class countWordsAndDisplay{
+public class CountWordsAndDisplay{
+	
+	
+	//method to count the length of string
+	public static int countLengthOfString(String str ){
+		
+		//initialize a variable count to store the length of string
+		int count = 0;
+		for(char ch : str.toCharArray()){
+			count++;
+		}
+		return count;
+	}
 
 	//method to calculate the number of words in a string
-	public static int countWords(String str){
+	public static int countWords(String str, int size){
 		int count = 1; 
-		for(int i = 0 ;  i < str.length(); i++){
+		for(int i = 0 ;  i < size; i++){
 			if(str.charAt(i)  == ' '){
 				count++;
 			}
@@ -14,7 +26,7 @@ public class countWordsAndDisplay{
 	}
 	
 	//method to split the string and store the words in 2D array
-	public static void splitAndStore(String str, String resultantArray[][]){
+	public static void splitAndStore(String str, String resultantArray[][], int size){
 
 		//initialize a string to store resultant string
 		String resultantString = "";
@@ -26,7 +38,7 @@ public class countWordsAndDisplay{
 		int count = 0;
 		
 		//use for loop to iterate over the string
-		for(int i = 0;  i < str.length(); i++){
+		for(int i = 0;  i < size; i++){
 			
 			//check if there encounters a space store the word in 2D array with its length
 			if(str.charAt(i) == ' '){
@@ -64,15 +76,17 @@ public class countWordsAndDisplay{
 		//get first string input from user
 		System.out.println("Enter string: ");
 		String str = input.nextLine().trim();
+		
+		int size = countLengthOfString(str);
 	
 		// invoke countWords method to count the number of words
-		int wordsLength = countWords(str);
+		int wordsLength = countWords(str, size);
 		
 		//initialize a 2D array to store the word with it's length
 		String resultantArray[][] = new String[wordsLength][2];
 		
 		//invoke splitAndStore method and pass parameters as str and resultantArray
-		splitAndStore(str, resultantArray);
+		splitAndStore(str, resultantArray, size);
 		
 		//invoke displayMatrix method to print the output
 		displayMatrix(resultantArray);
