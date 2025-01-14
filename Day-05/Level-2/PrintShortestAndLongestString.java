@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class CountWordsAndDisplay{
+public class PrintShortestAndLongestString{
 	
 	//method to count the length of string
 	public static int countLengthOfString(String str ){
@@ -66,6 +66,34 @@ public class CountWordsAndDisplay{
 		}
 	}
 	
+	//method to store shortest and longest string in a 1D array
+	public static void findShortestLongest(String resultantArray[][], String array[], int index[]){
+		int shortestLength = Integer.MAX_VALUE;
+		String shortest = "";
+		String longest = "";
+		int longestLength = Integer.MIN_VALUE;
+		for(int i = 0; i < resultantArray.length; i++){
+			String temp = resultantArray[i][1];
+			int ch = Integer.parseInt(temp);
+			if(ch < shortestLength){
+				shortestLength = ch;
+				shortest = "";
+				shortest += resultantArray[i][0];
+			}
+			if(ch  > longestLength){
+				longestLength = ch;
+				longest = "";
+				longest += resultantArray[i][0];
+			}
+			temp = "";
+		}
+		array[0] = shortest;
+		array[1] = longest;
+		
+		index[0] = shortestLength;
+		index[1] = longestLength;
+	}
+	
 	//main method
 	public static void main(String[] args){
 	
@@ -90,6 +118,18 @@ public class CountWordsAndDisplay{
 		//invoke displayMatrix method to print the output
 		displayMatrix(resultantArray);
 		
+		//initialize a 1D array to store shortest and longest string
+		String array[] = new String[2];
+		
+		//initialize an array to store length of shortest and longest string
+		int index[] = new int[2];
+		
+		//invoke method findShortestLongest to print shortest and longest
+		findShortestLongest(resultantArray, array, index);
+		
+		//print output
+		System.out.println("Shortest string is ("+ array[0] + ") with length "+ index[0]);
+		System.out.print("Longest string is ("+ array[1] + ") with length "+ index[1]);
 		//close scanner
 		input.close();
 	}
