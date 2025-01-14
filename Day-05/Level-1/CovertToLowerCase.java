@@ -1,8 +1,9 @@
 import java.util.Scanner;
 public class CovertToLowerCase{
-	// Method to convert lower case alphabets into uppercase letters
+
+	// Method to convert uppercase case alphabets Lowercase letters
 	public static String ConvertToLowerCase(String text){
-		// Value contains the result string after converted into the upper case
+		// Value contains the result string after converted into the Lower case
 		String resultString ="";
 		for(int i = 0; i < text.length(); i++){
 			char ch = text.charAt(i);
@@ -15,7 +16,7 @@ public class CovertToLowerCase{
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Enter the string : ");
+		System.out.print("Enter the string : ");
 		String text = input.next();
 		
 		String LowerCaseUsingMethod = text.toLowerCase(); // variable store upper using inbuilt mehtod
