@@ -68,6 +68,7 @@ public class PrintShortestAndLongestString{
 	
 	//method to store shortest and longest string in a 1D array
 	public static void findShortestLongest(String resultantArray[][], String array[], int index[]){
+	
 		int shortestLength = Integer.MAX_VALUE;
 		String shortest = "";
 		String longest = "";
@@ -87,13 +88,16 @@ public class PrintShortestAndLongestString{
 			}
 			temp = "";
 		}
+		
+		//storing the shortest string to 0 index and longest string to index 1
 		array[0] = shortest;
 		array[1] = longest;
 		
+		//storing the length of shortest string to 0 index and longest string to index 1
 		index[0] = shortestLength;
 		index[1] = longestLength;
 	}
-	
+
 	//main method
 	public static void main(String[] args){
 	
