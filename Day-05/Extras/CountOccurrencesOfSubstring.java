@@ -11,7 +11,6 @@ public class CountOccurrencesOfSubstring {
             count++;
             index += subStringValue.length();
         }
-
         return count;
     }
     public static void main(String[] args) {
@@ -21,7 +20,6 @@ public class CountOccurrencesOfSubstring {
         // Get user input string
         System.out.println("Enter the string: ");
         String text = input.next();
-	
 		
         System.out.println("Enter the substring: ");
         String subString = input.next();
