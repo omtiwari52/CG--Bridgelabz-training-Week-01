@@ -10,7 +10,7 @@ public class IllegalArgumentExceptionDemo{
         } catch (IllegalArgumentException e) {
             System.out.println("Caught IllegalArgumentException: " + e.getMessage());
         } catch (RuntimeException e) {
-            System.out.println("Caught RuntimeException: " + e.getMessage());
+            System.out.println("Caught RuntimeException:/. " + e.getMessage());
         }
     }
 
@@ -31,13 +31,13 @@ public class IllegalArgumentExceptionDemo{
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter a string: ");
-        String input = input.nextLine();
+        String inputTexString = input.nextLine();
 
         // Call the method to generate the exception
-        generateException(input);
+        generateException(inputTexString);
 
         // Call the method to handle the RuntimeException
-        handleRuntimeException(input);
+        handleRuntimeException(inputTexString);
 		
 		//close canner
 		input.close();
