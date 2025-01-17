@@ -3,6 +3,8 @@ import java.time.format.DateTimeFormatter;
 
 public class DisplayCurrentDateInDifferentFormats {
     public static void main(String[] args) {
+
+        // Get the current date and time
         LocalDateTime currentDate = LocalDateTime.now();
 
         DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
