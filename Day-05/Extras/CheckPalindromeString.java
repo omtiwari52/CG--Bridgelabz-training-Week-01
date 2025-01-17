@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class CheckPallindromeString{
+public class CheckPalindromeString{
 
 	//Method which checks if string is pallindrome or not
 	public static boolean isPallindrome(String text){
