@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 public class CompareDates {
     
@@ -19,16 +20,27 @@ public class CompareDates {
         Scanner input = new Scanner(System.in);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
-        //prompt user to enter the first date
-        System.out.print("Enter the first date (dd-MM-yyyy): ");
-        String inputDate1 = input.nextLine();
-        LocalDate date1 = LocalDate.parse(inputDate1, formatter);
+        boolean validInput = false;
+        LocalDate date1 = null;
+        LocalDate date2 = null;
 
-        //prompt user to enter the second date
-        System.out.print("Enter the first date (dd-MM-yyyy): ");
-        String inputDate2 = input.nextLine();
-         LocalDate date2 = LocalDate.parse(inputDate2, formatter);
-        
+        while (!validInput) {
+            try {
+                // Prompt user to enter the first date
+                System.out.print("Enter the first date (dd-MM-yyyy): ");
+                String inputDate1 = input.nextLine();
+                date1 = LocalDate.parse(inputDate1, formatter);
+
+                // Prompt user to enter the second date
+                System.out.print("Enter the second date (dd-MM-yyyy): ");
+                String inputDate2 = input.nextLine();
+                date2 = LocalDate.parse(inputDate2, formatter);
+
+                validInput = true;
+            } catch (DateTimeParseException e) {
+                System.out.println("Invalid date format. Please enter dates in the format dd-MM-yyyy.");
+            }
+        }
         //call the method to compare the dates
         compareDates(date1, date2);
 
